@@ -1,0 +1,12 @@
+<nav class="">
+    <ul>
+        <li> <%= link_to "HRI", "/holidaybird/hri"%> </li>
+        <li> <%= link_to "RET", "/holidaybird/ret"%> </li>
+        <li> <%= link_to "CON", "/holidaybird/consumer"%> </li>
+        <li> <%= link_to "Totals", "/holidaybird/totals"%> </li>
+    </ul>
+</nav>
+
+<h2> Forecast value in Orange, Harvest value in Blue </h2>
+
+<h3> Data refreshed every 15 minutes. Data last refreshed <%= display_stamp(@date) %>. </h3>

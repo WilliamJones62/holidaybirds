@@ -1,0 +1,32 @@
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+  padding: 15px;
+}
+
+th{
+  text-align: left;
+}
+
+tr#green {
+  background-color: green;
+}
+
+tr#yellow {
+  background-color: yellow;
+}
+
+tr#red {
+  background-color: red;
+}
+
+td#blue {
+  background-color: blue;
+}
+
+td#orange {
+  background-color: orange;
+}

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  channel: MyString
+  sku: MyString
+  description: MyString
+  shipped: 1
+  ordered: 1
+  forecast: 1
+  harvest: 1
+  datetime: 2017-10-11 11:11:15
+
+two:
+  channel: MyString
+  sku: MyString
+  description: MyString
+  shipped: 1
+  ordered: 1
+  forecast: 1
+  harvest: 1
+  datetime: 2017-10-11 11:11:15

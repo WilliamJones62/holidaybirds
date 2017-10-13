@@ -1,0 +1,44 @@
+<%= render 'navigation' %>
+
+<table>
+  <tr>
+    <th>SKU</th>
+    <th>Item</th>
+    <th>Shipped</th>
+    <th>Ordered</th>
+    <th>Forecast/Harvest</th>
+    <th>To Sell</th>
+  </tr>
+
+  <% @main.each do |main| %>
+    <% sold = (main.shipped + main.ordered) * 100 %>
+    <% if main.harvest == 0 %>
+      <% percent = sold/main.forecast %>
+    <% else %>
+      <% percent = sold/main.harvest %>
+    <% end %>
+    <% if percent < 50 %>
+      <tr id="green">
+    <% else %>
+      <% if percent < 75 %>
+        <tr id="yellow">
+      <% else %>
+        <tr id="red">
+      <% end %>
+    <% end %>
+      <td><%= main.sku %></td>
+      <td><%= main.description %></td>
+      <td><%= main.shipped %></td>
+      <td><%= main.ordered %></td>
+      <% if main.harvest == 0 %>
+        <td id="orange"><%= main.forecast %></td>
+        <td><%= main.forecast - (main.shipped + main.ordered) %></td>
+      <% else %>
+        <td id="blue"><%= main.harvest %></td>
+        <td><%= main.harvest - (main.shipped + main.ordered) %></td>
+      <% end %>
+    </tr>
+  <% end %>
+</table>
+
+<%= render 'navigation' %>
