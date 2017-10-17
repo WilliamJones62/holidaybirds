@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  get 'holidaybird/hri'
+  get 'holidaybird/fsv'
 
   get 'holidaybird/ret'
 
   get 'holidaybird/consumer'
+
+  get 'holidaybird/fsr'
 
   get 'holidaybird/totals'
 

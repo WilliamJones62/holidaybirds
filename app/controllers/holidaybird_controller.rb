@@ -1,6 +1,6 @@
 class HolidaybirdController < ApplicationController
-  def hri
-    @main = Holidaybird.where(channel: 'HRI').all
+  def fsv
+    @main = Holidaybird.where(channel: 'FSV').all
     @date = get_db_timestamp
   end
 
@@ -11,6 +11,11 @@ class HolidaybirdController < ApplicationController
 
   def consumer
     @main = Holidaybird.where(channel: 'CON').all
+    @date = get_db_timestamp
+  end
+
+  def fsr
+    @main = Holidaybird.where(channel: 'FSR').all
     @date = get_db_timestamp
   end
 
