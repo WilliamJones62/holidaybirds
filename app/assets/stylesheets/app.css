@@ -12,21 +12,64 @@ th{
 }
 
 tr#green {
-  background-color: green;
+  background-color: rgb(102,255,102);
 }
 
 tr#yellow {
-  background-color: yellow;
+  background-color: rgb(255,255,102);
 }
 
 tr#red {
-  background-color: red;
+  background-color: rgb(255,153,153);
 }
 
 td#blue {
-  background-color: blue;
+  background-color: rgb(51,153,255);
 }
 
 td#orange {
   background-color: orange;
+}
+
+#navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(153,255,255);
+}
+
+#navbar li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+#navbar li span {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.active {
+    background-color: #4CAF50;
+}.paging-nav {
+  text-align: left;
+  padding-top: 2px;
+}
+
+.paging-nav a {
+  margin: auto 1px;
+  text-decoration: none;
+  display: inline-block;
+  padding: 1px 7px;
+  background: #91b9e6;
+  color: white;
+  border-radius: 3px;
+}
+
+.paging-nav .selected-page {
+  background: #187ed5;
+  font-weight: bold;
 }

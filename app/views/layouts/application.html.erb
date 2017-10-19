@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
     <title>Turkeytote</title>
     <%= csrf_meta_tags %>
 
@@ -10,5 +12,14 @@
 
   <body>
     <%= yield %>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <script src="/assets/paging.js"></script>
+    <script>
+      $(document).ready(function() {
+          $('#mytable').paging({limit:10});
+      });
+    </script>
   </body>
+
 </html>

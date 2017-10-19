@@ -1,13 +1,10 @@
-<nav class="">
+<div id="navbar">
     <ul>
-        <li> <%= link_to "FSV", "/holidaybird/fsv"%> </li>
-        <li> <%= link_to "RET", "/holidaybird/ret"%> </li>
-        <li> <%= link_to "FSR", "/holidaybird/fsr"%> </li>
-        <li> <%= link_to "CON", "/holidaybird/consumer"%> </li>
-        <li> <%= link_to "Totals", "/holidaybird/totals"%> </li>
+        <li> <span><%= link_to "FSV", "/holidaybird/fsv"%></span> </li>
+        <li> <span><%= link_to "RET", "/holidaybird/ret"%></span> </li>
+        <li> <span><%= link_to "FSR", "/holidaybird/fsr"%></span> </li>
+        <li> <span><%= link_to "CON", "/holidaybird/consumer"%></span> </li>
+        <li> <span><%= link_to "Totals", "/holidaybird/totals"%></span> </li>
     </ul>
-</nav>
-
-<h2> Forecast value in Orange, Harvest value in Blue </h2>
-
-<h3> Data refreshed every 15 minutes. Data last refreshed <%= display_stamp(@date) %>. </h3>
+</div>
+<br>

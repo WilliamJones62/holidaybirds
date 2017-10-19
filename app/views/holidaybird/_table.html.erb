@@ -1,6 +1,6 @@
-<%= render 'navigation' %>
 
-<table>
+<table id="mytable">
+  <thead>
   <tr>
     <th>SKU</th>
     <th>Item</th>
@@ -9,7 +9,9 @@
     <th>Forecast/Harvest</th>
     <th>To Sell</th>
   </tr>
+  </thead>
 
+  <tbody>
   <% @main.each do |main| %>
     <% sold = (main.shipped + main.ordered) * 100 %>
     <% if main.harvest == 0 %>
@@ -39,6 +41,5 @@
       <% end %>
     </tr>
   <% end %>
+  </tbody>
 </table>
-
-<%= render 'navigation' %>
