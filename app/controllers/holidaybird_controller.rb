@@ -1,26 +1,19 @@
 class HolidaybirdController < ApplicationController
+
   def fsv
-    @main = Holidaybird.where(channel: 'FSV').all
-    @main = @main.sort_by &:sku
-    @date = get_db_timestamp
+    set_variables 'FSV'
   end
 
   def ret
-    @main = Holidaybird.where(channel: 'RET').all
-    @main = @main.sort_by &:sku
-    @date = get_db_timestamp
+    set_variables 'RET'
   end
 
   def consumer
-    @main = Holidaybird.where(channel: 'CON').all
-    @main = @main.sort_by &:sku
-    @date = get_db_timestamp
+    set_variables 'CON'
   end
 
   def fsr
-    @main = Holidaybird.where(channel: 'FSR').all
-    @main = @main.sort_by &:sku
-    @date = get_db_timestamp
+    set_variables 'FSR'
   end
 
   def totals
@@ -49,6 +42,12 @@ class HolidaybirdController < ApplicationController
         @main.push(first_instances_of_sku)
       end
     end
+    @main = @main.sort_by &:sku
+    @date = get_db_timestamp
+  end
+
+  def set_variables (channel)
+    @main = Holidaybird.where(channel: channel).all
     @main = @main.sort_by &:sku
     @date = get_db_timestamp
   end
